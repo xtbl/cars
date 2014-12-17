@@ -14,7 +14,8 @@
  */
 angular.module( 'ngBoilerplate.home', [
   'ui.router',
-  'plusOne'
+  'plusOne',
+  'ngBoilerplate.cars'
 ])
 
 /**
@@ -38,8 +39,13 @@ angular.module( 'ngBoilerplate.home', [
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', function HomeController( $scope ) {
-})
+.controller( 'HomeCtrl', ['$scope', 'cars', HomeControllerFn]);
 
-;
+function HomeControllerFn($scope, cars) {
+  console.log("cars", cars);
+  console.log("cars", cars.getAllCars());
+  $scope.cars = cars.getAllCars();
+
+
+}
 
