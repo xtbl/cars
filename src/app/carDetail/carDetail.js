@@ -19,16 +19,9 @@ angular.module( 'ngBoilerplate.carDetail', [
     })
 
     .controller( 'CarDetailCtrl', function CarDetailCtrl( $scope, $stateParams, cars ) {
-        console.log("car detail controller");
-        console.log("[details] $stateParams", $stateParams);
-        console.log("[details] cars", cars);
-        // TODO: get car details by id
+        $scope.lol = "LOL";
         $scope.car = cars.getCarById($stateParams.carId);
-        $scope.dropdownDemoItems = [
-            "The first choice!",
-            "And another choice for you.",
-            "but wait! A third!"
-        ];
+        console.log("details", $scope.car);
     })
 
 ;

@@ -6,7 +6,7 @@
     .factory('cars', [carsFn]);
 
     function carsFn() {
-        var userSettings = {};
+        var cars = {};
 
         function getCars() {
             return "[cars service] LOL cars";
@@ -96,12 +96,15 @@
                 }
             ];
 
-            return allCars;
+            // TODO: add storage https://github.com/grevory/angular-local-storage
+            // TODO: add compare service and template. uses local storage to display the cars to compare
+            cars = allCars; // TODO: check if allCars is empty, if it is add to storage, if not retrieve from storage. cars service manages the car retrieval using local storage not each controller
+            return cars;
         }
 
         function getCarById(carId) {
-            // TODO: install lodash
-            return "car details";
+            var carDetails = _.find(cars, {"_id": carId});
+            return carDetails;
         }
 
         return {

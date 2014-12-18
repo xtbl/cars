@@ -1,1 +1,10 @@
-<h1>Car Detail View</h1>
+<div class="row">
+    <div class="col-xs-6 col-md-3">
+        <img class="thumbnail" ng-src="{{ car.picture }}" alt="{{ car.model }}">
+    </div>
+    <div class="col-xs-6 col-md-3">
+        <h1>{{ car.brand }} <span class="label label-default">{{ car.model }}</span></h1>
+        <h3 ng-show="car.isDeal"><span class="label label-danger">Deal!!!</span></h3>
+        <h3>Price: <span class="label label-info">${{ car.price }}</span></h3>
+    </div>
+</div>
