@@ -19,7 +19,6 @@ angular.module( 'ngBoilerplate.carDetail', [
     })
 
     .controller( 'CarDetailCtrl', function CarDetailCtrl( $scope, $stateParams, cars ) {
-        $scope.lol = "LOL";
         $scope.car = cars.getCarById($stateParams.carId);
         console.log("details", $scope.car);
     })

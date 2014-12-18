@@ -19,13 +19,13 @@
                             <div class="caption">
                                 <p>{{ car.brand }}</p>
                             </div>
-                            <a href="#">
+                            <a ui-sref="detail({carId: car._id })">
                                 <img ng-src="{{ car.picture }}"
                                  class="img-responsive">
                             </a>
                         </div>
                         <div class="info">
-                            <a href="#">{{ car.model }}</a>
+                            <a ui-sref="detail({carId: car._id })">{{ car.model }}</a>
                             <p class="small coral text-right"><i class="fa fa-clock-o"></i> Year: {{ car.year }}</p>
                         </div>
                         <div class="stats turqbg">
